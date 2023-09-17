@@ -1,6 +1,9 @@
 #aqui foi feito o teste do código que foi aplicadono arquivo 'main.py'
 #a primeira criança está sem nome na planilha, por isso que fica como 'nan'
 import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 planilha = 'Cadastro Crianças.xlsx'
 
@@ -9,9 +12,6 @@ email_framework = pd.read_excel(planilha)
 crianças_framework = pd.read_excel(planilha, usecols=['Nome da Criança'])
 pulseiras_dataframe = pd.read_excel(planilha, usecols=['Código Pulseira'])
 
-print(email_framework)
-
-'''
 #cria listas vazias para comportar os dataframes
 lst_emails = []
 lst_nomes = []
@@ -35,4 +35,3 @@ def gerar_textos(lst_p, lst_n, lst_e):
 txt_ = gerar_textos(lst_pulseiras, lst_nomes, lst_emails)
 
 print(txt_)
-'''
