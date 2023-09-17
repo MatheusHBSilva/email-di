@@ -5,10 +5,13 @@ import pandas as pd
 planilha = 'Cadastro Crianças.xlsx'
 
 #tranforma em dataframe as colunas de email, nome da criança e pulseira
-email_framework = pd.read_excel(planilha, usecols=['E-mail'])
+email_framework = pd.read_excel(planilha)
 crianças_framework = pd.read_excel(planilha, usecols=['Nome da Criança'])
 pulseiras_dataframe = pd.read_excel(planilha, usecols=['Código Pulseira'])
 
+print(email_framework)
+
+'''
 #cria listas vazias para comportar os dataframes
 lst_emails = []
 lst_nomes = []
@@ -32,3 +35,4 @@ def gerar_textos(lst_p, lst_n, lst_e):
 txt_ = gerar_textos(lst_pulseiras, lst_nomes, lst_emails)
 
 print(txt_)
+'''
